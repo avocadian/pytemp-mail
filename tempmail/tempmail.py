@@ -21,7 +21,7 @@ class api:
             }
 
     def random_email(self, name_length: int = None):
-        if name_length is None:
+        if self.name_length is None:
             r = httpx.post(
                     f'{self.url}/new',
                     headers=self.headers,
@@ -66,7 +66,7 @@ class api:
     
     def email_delete(self, email: str, token: str):
         with httpx.Client() as client:
-            r = client.request(
+            r = self.client.request(
                     "DELETE", f'{self.url}/{self.email}',
                     headers=self.headers, 
                     json={'token': self.token}
