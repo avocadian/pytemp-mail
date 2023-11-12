@@ -30,7 +30,8 @@ class tempmail:
                         'max_name_length': 10,
                         }
                     )
-            print({'status': {'code': self.r.status_code},'data': self.r.json()})
+            print({'status': {'code': self.r.status_code},
+                    'data': self.r.json()})
         else:
             r = httpx.post(
                     f'{self.url}/new',
@@ -70,5 +71,5 @@ class tempmail:
                     headers=self.headers, 
                     json={'token': self.token}
                     )
-        print({'status': {'code': self.r.status_code})
+        print({'status': {'code': self.r.status_code}})
 
