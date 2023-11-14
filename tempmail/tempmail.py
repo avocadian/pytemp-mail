@@ -1,7 +1,7 @@
 import httpx
 
 
-class api:
+class api():
     def __init__(self):
         self.endpoint = 'api.internal.temp-mail.io'
         self.url = f'https://{self.endpoint}/api/v3/email'
