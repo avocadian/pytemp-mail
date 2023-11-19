@@ -1,7 +1,7 @@
 import httpx
 
 
-class api():
+class api:
     def __init__(self):
         self.endpoint = 'api.internal.temp-mail.io'
         self.url = f'https://{self.endpoint}/api/v3/email'
@@ -21,7 +21,7 @@ class api():
             }
 
     def random_email(self, name_length: int = None):
-        if self.name_length is None:
+        if name_length is None:
             r = httpx.post(
                     f'{self.url}/new',
                     headers=self.headers,
@@ -30,46 +30,46 @@ class api():
                         'max_name_length': 10,
                         }
                     )
-            print({'status': {'code': self.r.status_code},
-                    'data': self.r.json()})
+            print({'status': {'code': r.status_code},
+                    'data': r.json()})
         else:
             r = httpx.post(
                     f'{self.url}/new',
                     headers=headers,
                     json={
-                        'min_name_length': self.name_length,
-                        'max_name_length': self.name_length
+                        'min_name_length': name_length,
+                        'max_name_length': name_length
                         }
                     )
-            print({'status': {'code': self.r.status_code},
-                    'data': self.r.json()})
+            print({'status': {'code': r.status_code},
+                    'data': r.json()})
 
     def custom_email(self, name: str, domain: str):
         r = httpx.post(
                 f'{self.url}/new',
                 headers=self.headers,
                 json={
-                    'name': self.name,
-                    'domain': self.domain
+                    'name': name,
+                    'domain': domain
                     }
                 )
-        print({'status': {'code': self.r.status_code},
-                'data': self.r.json()})
+        print({'status': {'code': r.status_code},
+                'data': r.json()})
 
     def messages(self, email: str):
         r = httpx.get(
-                f'{self.url}/{self.email}/messages',
+                f'{self.url}/{email}/messages',
                 headers=self.headers
                 )
-        print({'status': {'code': self.r.status_code},
-                'data': self.r.json()})
+        print({'status': {'code': r.status_code},
+                'data': r.json()})
     
     def email_delete(self, email: str, token: str):
         with httpx.Client() as client:
-            r = self.client.request(
-                    "DELETE", f'{self.url}/{self.email}',
+            r = client.request(
+                    "DELETE", f'{self.url}/{email}',
                     headers=self.headers, 
-                    json={'token': self.token}
+                    json={'token': token}
                     )
-        print({'status': {'code': self.r.status_code}})
+        print({'status': {'code': r.status_code}})
 
