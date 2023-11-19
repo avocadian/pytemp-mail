@@ -73,3 +73,21 @@ class api:
                     )
         print({'status': {'code': r.status_code}})
 
+    def domains(self):
+        domain_list = [
+                 'greencafe24.com',
+                 'waterisgone.com',
+                 'superblohey.com',
+                 'happy2023year.com',
+                 'gixenmixen.com',
+                 'bloheyz.com',
+                 'zipcatfish.com',
+                 'myinfoinc.com',
+                 'skygazerhub.com',
+                 'sfolkar.com',
+                 'pirolsnet.com',
+                 'rentforsale7.com',
+                 'tippabble.com',
+                 'rfcdrive.com',
+                ]
+        print(domain_list)
