@@ -1,5 +1,5 @@
 # pytemp-mail
-Api of temp-mail.lol
+Api of temp-mail.io
 
 ## Explanation about
 This is an unofficial API wrapper for https://temp-mail.io/
