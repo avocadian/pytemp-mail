@@ -3,8 +3,8 @@ import httpx
 
 class api:
     def __init__(self):
-        self.endpoint = 'api.internal.temp-mail.io'
-        self.url = f'https://{self.endpoint}/api/v3/email'
+        self.host = 'api.internal.temp-mail.io'
+        self.url = f'https://{self.host}/api/v3/email'
         self.headers = {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0',
                 'Accept': 'application/json, text/plain, */*',
