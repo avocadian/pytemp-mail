@@ -17,8 +17,8 @@ api = tempmail.api()
 
 api.random_email()
 api.random_email(30)
-api.custom_email(name='testHogehoge', domain='greencafe24.com')
-api.messages(email='testHogehoge@greencafe24.com')
+api.custom_email(name='testhogehoge', domain='greencafe24.com')
+api.messages(email='testhogehoge@greencafe24.com')
 api.email_delete(email='testhogehoge@greencafe24.com', token='QOSzfJD6huIGmiNiPKSY')
 api.domains()
 ```
