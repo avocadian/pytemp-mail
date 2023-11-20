@@ -16,3 +16,4 @@ import tempmail
 api = tempmail.api()
 api.random_email()
 api.random_email(30)
+```
