@@ -4,7 +4,7 @@ setup(
         name='pytemp-mail',
         version='1.0.0',
         packages=find_packages(),
-        description='Api of temp-mail.lol',
+        description='Api of temp-mail.io',
         url='https://github.com/2-l0/pytemp-mail',
         install_requires=[
             'httpx'
