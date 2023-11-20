@@ -22,7 +22,7 @@ api.messages(email='testhogehoge@greencafe24.com')
 api.email_delete(email='testhogehoge@greencafe24.com', token='QOSzfJD6huIGmiNiPKSY')
 api.domains()
 ```
-#### *result*
+### *result*
 ```
 {'status': {'code': 200}, 'data': {'email': 'xlomgnzr2v@rfcdrive.com', 'token': 'gT-lF8Zuc32zBq7Ocysc'}}
 {'status': {'code': 200}, 'data': {'email': 'cisaij11c9wf8csqr0f0xubh9ccczu@sfolkar.com', 'token': '2-gaxp-bH3koXCCdcUoI'}}
