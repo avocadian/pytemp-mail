@@ -17,7 +17,8 @@ api = tempmail.api()
 api.random_email()
 api.random_email(30)
 ```
-```result
+result
+```
 >>> {'status': {'code': 200}, 'data': {'email': 'xlomgnzr2v@rfcdrive.com', 'token': 'gT-lF8Zuc32zBq7Ocysc'}}
 >>> {'status': {'code': 200}, 'data': {'email': '93x8f1kj7pfdsqq7jmjk0uihru8u5n@rfcdrive.com', 'token': 'm0xAbLxkqJG4aJkRJg8V'}}
 ```
