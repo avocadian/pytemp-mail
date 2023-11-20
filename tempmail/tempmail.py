@@ -35,7 +35,7 @@ class api:
         else:
             r = httpx.post(
                     f'{self.url}/new',
-                    headers=headers,
+                    headers=self.headers,
                     json={
                         'min_name_length': name_length,
                         'max_name_length': name_length
