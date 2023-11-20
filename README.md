@@ -9,7 +9,7 @@ You can create an email address, receive messages, etc.
 `pip install git+https://github.com/2-l0/pytemp-mail.git`
 
 # Instructions
-### *Generate email address*
+### *sample code*
 ```py
 import tempmail
 
