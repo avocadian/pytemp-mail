@@ -10,3 +10,9 @@ You can create an email address, receive messages, etc.
 
 # Instructions
 ### *Generate email address*
+```py
+import tempmail
+
+api = tempmail.api()
+api.random_email()
+api.random_email(30)
