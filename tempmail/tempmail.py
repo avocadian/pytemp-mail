@@ -30,8 +30,8 @@ class api:
                         'max_name_length': 10,
                         }
                     )
-            print({'status': {'code': r.status_code},
-                    'data': r.json()})
+            return {'status': {'code': r.status_code},
+                    'data': r.json()}
         else:
             r = httpx.post(
                     f'{self.url}/new',
@@ -41,8 +41,8 @@ class api:
                         'max_name_length': name_length
                         }
                     )
-            print({'status': {'code': r.status_code},
-                    'data': r.json()})
+            return {'status': {'code': r.status_code},
+                    'data': r.json()}
 
     def custom_email(self, name: str, domain: str):
         r = httpx.post(
@@ -53,16 +53,16 @@ class api:
                     'domain': domain
                     }
                 )
-        print({'status': {'code': r.status_code},
-                'data': r.json()})
+        return {'status': {'code': r.status_code},
+                'data': r.json()}
 
     def messages(self, email: str):
         r = httpx.get(
                 f'{self.url}/{email}/messages',
                 headers=self.headers
                 )
-        print({'status': {'code': r.status_code},
-                'data': r.json()})
+        return {'status': {'code': r.status_code},
+                'data': r.json()}
     
     def email_delete(self, email: str, token: str):
         with httpx.Client() as client:
@@ -71,7 +71,7 @@ class api:
                     headers=self.headers, 
                     json={'token': token}
                     )
-        print({'status': {'code': r.status_code}})
+        return {'status': {'code': r.status_code}}
 
     def domains(self):
         domain_list = [
@@ -90,4 +90,4 @@ class api:
                  'tippabble.com',
                  'rfcdrive.com',
                 ]
-        print(domain_list)
+        return domain_list
