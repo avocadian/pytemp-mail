@@ -15,12 +15,12 @@ import tempmail
 
 api = tempmail.api()
 
-api.random_email()
-api.random_email(30)
-api.custom_email(name='testhogehoge', domain='greencafe24.com')
-api.messages(email='testhogehoge@greencafe24.com')
-api.email_delete(email='testhogehoge@greencafe24.com', token='QOSzfJD6huIGmiNiPKSY')
-api.domains()
+random_email = api.random_email()
+30_length_email = api.random_email(30)
+custom_email = api.custom_email(name='testhogehoge', domain='greencafe24.com')
+message = api.messages(email='testhogehoge@greencafe24.com')
+email_delete = api.email_delete(email='testhogehoge@greencafe24.com', token='QOSzfJD6huIGmiNiPKSY')
+domains = api.domains()
 ```
 ### *result*
 ```
